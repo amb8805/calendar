@@ -1,0 +1,6 @@
+0.08|1|1|1
+P,16.0,15,20,4,LargePizza
+N,5.0,5,0,0,Salad
+P,8.0,8,13,1,SmallPizza
+P,11.0,10,15,2,MediumPizza
+N,6.0,0,10,1,PizzaLogs

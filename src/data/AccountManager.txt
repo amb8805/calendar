@@ -1,0 +1,2 @@
+manager|manager|Jesse Jurman|manager
+cashier|cashier|Luke Coy|cashier
