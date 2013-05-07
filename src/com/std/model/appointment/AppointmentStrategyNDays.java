@@ -23,10 +23,10 @@ public class AppointmentStrategyNDays implements AppointmentStrategy {
 		
 		// generate the description string for NDaysPattern
 		NDaysPattern ptt = (NDaysPattern)pattern;
-		if(ptt.instanceEvery() == 1)
+		if(ptt.getinstanceEvery() == 1)
 			text = "recurs every day";
-		else if(ptt.instanceEvery() > 1)
-			text = "recurs every " + ptt.instanceEvery() + " days ";
+		else if(ptt.getinstanceEvery() > 1)
+			text = "recurs every " + ptt.getinstanceEvery() + " days ";
 		
 		// append the RecurrencePattern dateRange data
 		if(text.length() > 0)
