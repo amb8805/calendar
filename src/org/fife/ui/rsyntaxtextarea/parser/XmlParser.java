@@ -200,13 +200,13 @@ public class XmlParser extends AbstractParser {
 
 		public void fatalError(SAXParseException e) {
 			doError(e, ParserNotice.ERROR);
-		}
+	 	}
 
 		// NOTE: If you compile with Java 5+, you must add IOException to the
 		// throws clause of this method.  The "official" release is built with
 		// Java 1.4.
 		public InputSource resolveEntity(String publicId, String systemId)
-								throws SAXException {
+								throws SAXException, IOException {
 			if (entityResolver!=null) {
 				try {
 					return entityResolver.resolveEntity(publicId, systemId);
