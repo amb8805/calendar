@@ -1,5 +1,10 @@
 package ZachsCrappyTogglDay;
 
+import java.util.HashMap;
+import java.util.Set;
+import com.std.model.CalendarModelUtility;
+
+import com.std.model.appointment.RefAppointment;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridBagLayout;
@@ -69,10 +74,10 @@ public class ToggleDayBlock extends JToggleButton {
 				temp.setBackground(new Color(0x00FFFFFF, true));
 				temp.setOpaque(false);
 			}
-			for (RefAppointment added : addedAppointments) {
-				if (CalendarModelUtiltiy.conflictingAppointments(added, app)) {
+			for (RefAppointment added : addedAppointments.keySet()) {
+				if (CalendarModelUtility.conflictingAppointments(added, app)) {
 
-					addedAppointments.get(added).addApointment(temp);
+					addedAppointments.get(added).addAppointment(temp);
 					addedAppointments.put(app, addedAppointments.get(added));
 					hasAdded = true;
 				}
@@ -101,9 +106,9 @@ public class ToggleDayBlock extends JToggleButton {
 	
 	public static void main(String[] args) {
 		JFrame f = new JFrame();
-		ToggleDayBlock t = new ToggleDayBlock();
-		t.update(Calendar.getInstance().getTime());
-		f.add(t);
+//		ToggleDayBlock t = new ToggleDayBlock();
+//		t.update(Calendar.getInstance().getTime());
+//		f.add(t);
 		f.setVisible(true);
 		f.setSize(600,600);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
