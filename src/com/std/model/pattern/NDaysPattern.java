@@ -52,7 +52,7 @@ public class NDaysPattern extends RecurrencePattern {
 	 * 
 	 * @return the number of days between the occurrences
 	 */
-	public int instanceEvery(){
+	public int getinstanceEvery(){
 		return n;
 	}
 

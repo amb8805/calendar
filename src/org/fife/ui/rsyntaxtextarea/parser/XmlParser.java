@@ -216,7 +216,13 @@ public class XmlParser extends AbstractParser {
 					ioe.printStackTrace();
 				}
 			}
-			return super.resolveEntity(publicId, systemId);
+			try {
+				return super.resolveEntity(publicId, systemId);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
 		}
 
 		public void warning(SAXParseException e) {

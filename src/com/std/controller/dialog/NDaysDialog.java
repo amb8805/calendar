@@ -181,7 +181,7 @@ public class NDaysDialog extends JDialog {
 		DurationUpdateListener.updateDuration(duration, startDate, endDate);
 
 		// the recurrence option field
-		number = new JTextField("" + pattern.instanceEvery());
+		number = new JTextField("" + pattern.getinstanceEvery());
 		number.setMargin(new Insets(0, 4, 0, 4));
 		number.setHorizontalAlignment(SwingConstants.RIGHT);
 
