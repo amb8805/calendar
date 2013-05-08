@@ -38,7 +38,7 @@ public class NDaysPatternTest {
 		DateRange dRange = new DateRange(date,endDate);
 		int n = 3;
 		NDaysPattern nPatt = new NDaysPattern( dRange,n );
-		assertEquals(n ,nPatt.instanceEvery());
+		assertEquals(n ,nPatt.getinstanceEvery());
 	}
 
 	@Test
@@ -51,9 +51,9 @@ public class NDaysPatternTest {
 		DateRange dRange = new DateRange(date,endDate);
 		int n = 0;
 		NDaysPattern nPatt = new NDaysPattern( dRange,n );
-		assertEquals(0, nPatt.instanceEvery());
+		assertEquals(0, nPatt.getinstanceEvery());
 		nPatt.setInstanceEveryDays(10);
-		assertEquals(10, nPatt.instanceEvery());
+		assertEquals(10, nPatt.getinstanceEvery());
 	}
 
 }

@@ -250,6 +250,7 @@ public class CalendarView extends JFrame {
 	 * 		  preerences button
 	 */
 	
+	
 	public void addPreferencesActionListener(ActionListener listener) {
 		calMenu.getPreferencesMenuItem().addActionListener(listener);
 	}
